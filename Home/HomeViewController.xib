@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -11,7 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="CodeTest" customModuleProvider="target">
             <connections>
                 <outlet property="homeCollectionView" destination="f4l-vF-i8V" id="5qL-I6-yWs"/>
-                <outlet property="selectCount" destination="fDH-74-AFJ" id="KfM-Gz-elC"/>
+                <outlet property="selectedCountLabel" destination="fDH-74-AFJ" id="KfM-Gz-elC"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,24 +20,24 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QDL-HH-kFN">
-                    <rect key="frame" x="0.0" y="44.000000000000007" width="428" height="64.666666666666686"/>
+                    <rect key="frame" x="0.0" y="0.0" width="428" height="65"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWi-fw-891">
-                            <rect key="frame" x="20" y="21.666666666666671" width="21.333333333333329" height="21.333333333333329"/>
+                            <rect key="frame" x="20" y="21.5" width="21.5" height="21.5"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="DWi-fw-891" secondAttribute="height" multiplier="1:1" id="4VV-WB-zRt"/>
                             </constraints>
                             <state key="normal" backgroundImage="Vector"/>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fDH-74-AFJ">
-                            <rect key="frame" x="176" y="14.999999999999996" width="76" height="34.666666666666657"/>
+                            <rect key="frame" x="176" y="15.5" width="76" height="33.5"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" type="system" pointSize="28"/>
                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xdi-BU-PzU">
-                            <rect key="frame" x="343.66666666666669" y="16.333333333333336" width="64.333333333333314" height="32"/>
+                            <rect key="frame" x="344" y="16.5" width="64" height="32"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="xdi-BU-PzU" secondAttribute="height" multiplier="2:1" id="KJY-Uz-9aH"/>
                             </constraints>
@@ -60,7 +59,7 @@
                     </constraints>
                 </view>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="f4l-vF-i8V">
-                    <rect key="frame" x="0.0" y="108.66666666666669" width="428" height="783.33333333333326"/>
+                    <rect key="frame" x="0.0" y="65" width="428" height="861"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="JcH-pN-N4I">
                         <size key="itemSize" width="128" height="128"/>

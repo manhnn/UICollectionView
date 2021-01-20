@@ -11,7 +11,9 @@ class HomeViewController: UIViewController {
 
     @IBOutlet weak var homeCollectionView: UICollectionView!
     
-    @IBOutlet weak var selectCount: UILabel!
+    @IBOutlet weak var selectedCountLabel: UILabel!
+    
+    var selectCount: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +34,12 @@ extension HomeViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
         
-        print("tapped me \(indexPath.row)")
+        if indexPath.row == 0 {
+            
+        }
+        else {
+            print("tapped me \(indexPath.row)")
+        }
     }
 }
 
@@ -45,7 +52,6 @@ extension HomeViewController: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCollectionViewCell.identifier, for: indexPath) as! HomeCollectionViewCell
         cell.delegate = self
         cell.setupData(with: listImages[indexPath.row])
-        print(indexPath.row)
         return cell
     }
 }
@@ -54,7 +60,7 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        let width = (UIScreen.main.bounds.width - (HomeCollectionViewCell.columnCount + 1) * HomeCollectionViewCell.cellSpacing) / HomeCollectionViewCell.columnCount
+        let width = (UIScreen.main.bounds.width - (HomeCollectionViewCell.columnNumber + 1) * HomeCollectionViewCell.cellSpacing) / HomeCollectionViewCell.columnNumber
         let height = width
         return CGSize(width: width, height: height)
     }
@@ -70,6 +76,12 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
 
 extension HomeViewController: HomeCollectionViewCellDelegate {
     func homeCollectionViewCell(_ view: HomeCollectionViewCell, didTapSelectButtonIn image: Image) {
-        // add to Realm
+        if image.isSelected {
+            selectCount += 1
+        }
+        else {
+            selectCount -= 1
+        }
+        selectedCountLabel.text = selectCount > 0 ? "Select(\(selectCount))" : "Select"
     }
 }

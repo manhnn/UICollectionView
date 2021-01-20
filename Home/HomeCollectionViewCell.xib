@@ -26,9 +26,11 @@
                         <constraints>
                             <constraint firstAttribute="width" secondItem="xo1-4A-Rlu" secondAttribute="height" multiplier="1:1" id="K2I-q1-Mth"/>
                         </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                         <color key="tintColor" systemColor="systemGreenColor"/>
                         <state key="normal" backgroundImage="Vector-3">
-                            <color key="titleColor" systemColor="systemGreenColor"/>
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                         </state>
                         <connections>
                             <action selector="selectedButtonAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="ikO-MR-Fgf"/>
@@ -50,6 +52,10 @@
             <size key="customSize" width="149" height="149"/>
             <connections>
                 <outlet property="imageView" destination="EfG-1f-OYb" id="vea-nF-cV6"/>
+                <outlet property="imageViewBottomConstraint" destination="DHT-pv-Ha1" id="Ag6-dG-MNv"/>
+                <outlet property="imageViewLeadingConstraint" destination="ze0-cd-z6p" id="fKp-PR-EjL"/>
+                <outlet property="imageViewTopConstraint" destination="3SY-xv-GFr" id="qoc-dk-Ij9"/>
+                <outlet property="imageViewTrailingConstraint" destination="Mpw-ac-1oL" id="Zv2-wW-QcG"/>
                 <outlet property="selectedButton" destination="xo1-4A-Rlu" id="6u9-2A-KHE"/>
             </connections>
             <point key="canvasLocation" x="209.42028985507247" y="70.647321428571431"/>
