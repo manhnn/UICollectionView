@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="CodeTest" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QDL-HH-kFN">
+                    <rect key="frame" x="0.0" y="44.000000000000007" width="428" height="64.666666666666686"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWi-fw-891">
+                            <rect key="frame" x="20" y="21.666666666666671" width="21.333333333333329" height="21.333333333333329"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="DWi-fw-891" secondAttribute="height" multiplier="1:1" id="4VV-WB-zRt"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="Vector"/>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fDH-74-AFJ">
+                            <rect key="frame" x="173.33333333333334" y="14.333333333333336" width="81.333333333333343" height="36"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xdi-BU-PzU">
+                            <rect key="frame" x="343.66666666666669" y="16.333333333333336" width="64.333333333333314" height="32"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="xdi-BU-PzU" secondAttribute="height" multiplier="2:1" id="KJY-Uz-9aH"/>
+                            </constraints>
+                            <state key="normal" title="Add" backgroundImage="Rectangle 17">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="DWi-fw-891" firstAttribute="leading" secondItem="QDL-HH-kFN" secondAttribute="leading" constant="20" id="2bf-t6-S8f"/>
+                        <constraint firstItem="xdi-BU-PzU" firstAttribute="centerY" secondItem="QDL-HH-kFN" secondAttribute="centerY" id="PXN-99-pjH"/>
+                        <constraint firstAttribute="trailing" secondItem="xdi-BU-PzU" secondAttribute="trailing" constant="20" id="SOZ-Mu-3D5"/>
+                        <constraint firstItem="xdi-BU-PzU" firstAttribute="width" secondItem="QDL-HH-kFN" secondAttribute="width" multiplier="0.15" id="T62-dC-rXX"/>
+                        <constraint firstItem="fDH-74-AFJ" firstAttribute="centerY" secondItem="QDL-HH-kFN" secondAttribute="centerY" id="gZl-y0-Qmb"/>
+                        <constraint firstItem="fDH-74-AFJ" firstAttribute="centerX" secondItem="QDL-HH-kFN" secondAttribute="centerX" id="skY-MO-C6P"/>
+                        <constraint firstItem="DWi-fw-891" firstAttribute="width" secondItem="QDL-HH-kFN" secondAttribute="width" multiplier="0.05" id="we1-I4-hEM"/>
+                        <constraint firstItem="DWi-fw-891" firstAttribute="centerY" secondItem="QDL-HH-kFN" secondAttribute="centerY" id="zve-6p-y5Q"/>
+                    </constraints>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="f4l-vF-i8V">
+                    <rect key="frame" x="0.0" y="108.66666666666669" width="428" height="783.33333333333326"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="JcH-pN-N4I">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="f4l-vF-i8V" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="6cc-Um-Ueu"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="f4l-vF-i8V" secondAttribute="trailing" id="Bst-zP-dE3"/>
+                <constraint firstItem="QDL-HH-kFN" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="CfD-CH-fTy"/>
+                <constraint firstItem="f4l-vF-i8V" firstAttribute="top" secondItem="QDL-HH-kFN" secondAttribute="bottom" id="G3l-5p-qpT"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="f4l-vF-i8V" secondAttribute="bottom" id="JBE-7d-tJr"/>
+                <constraint firstItem="QDL-HH-kFN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ggb-bP-rL0"/>
+                <constraint firstItem="QDL-HH-kFN" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="vgD-sI-HQI"/>
+                <constraint firstItem="QDL-HH-kFN" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.07" id="xl8-c3-fsZ"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="103.79464285714285"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Rectangle 17" width="64" height="28"/>
+        <image name="Vector" width="17" height="17"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
