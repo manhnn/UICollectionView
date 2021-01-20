@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="HomeCollectionViewCell" id="gTV-IL-0wX" customClass="HomeCollectionViewCell" customModule="CodeTest" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="149" height="149"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="149" height="149"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EfG-1f-OYb">
+                        <rect key="frame" x="0.0" y="0.0" width="149" height="149"/>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xo1-4A-Rlu">
+                        <rect key="frame" x="3.0000000000000018" y="3.0000000000000018" width="29.666666666666671" height="29.666666666666671"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="xo1-4A-Rlu" secondAttribute="height" multiplier="1:1" id="K2I-q1-Mth"/>
+                        </constraints>
+                        <color key="tintColor" systemColor="systemGreenColor"/>
+                        <state key="normal" backgroundImage="Vector-3">
+                            <color key="titleColor" systemColor="systemGreenColor"/>
+                        </state>
+                        <connections>
+                            <action selector="selectedButtonAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="ikO-MR-Fgf"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="xo1-4A-Rlu" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="3" id="27N-Lq-MqB"/>
+                <constraint firstItem="xo1-4A-Rlu" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="3" id="2hr-et-boO"/>
+                <constraint firstItem="EfG-1f-OYb" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="3SY-xv-GFr"/>
+                <constraint firstAttribute="bottom" secondItem="EfG-1f-OYb" secondAttribute="bottom" id="DHT-pv-Ha1"/>
+                <constraint firstAttribute="trailing" secondItem="EfG-1f-OYb" secondAttribute="trailing" id="Mpw-ac-1oL"/>
+                <constraint firstItem="xo1-4A-Rlu" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="0.2" id="l0H-NG-TuM"/>
+                <constraint firstItem="EfG-1f-OYb" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ze0-cd-z6p"/>
+            </constraints>
+            <size key="customSize" width="149" height="149"/>
+            <connections>
+                <outlet property="imageView" destination="EfG-1f-OYb" id="vea-nF-cV6"/>
+                <outlet property="selectedButton" destination="xo1-4A-Rlu" id="6u9-2A-KHE"/>
+            </connections>
+            <point key="canvasLocation" x="209.42028985507247" y="70.647321428571431"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Vector-3" width="21" height="21"/>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
