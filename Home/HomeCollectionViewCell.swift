@@ -8,7 +8,7 @@
 import UIKit
 
 protocol HomeCollectionViewCellDelegate: class {
-    func homeCollectionViewCell(_ view: HomeCollectionViewCell, didTapSelectButtonIn image: Image)
+    func homeCollectionViewCell(_ view: HomeCollectionViewCell, didTapSelectButtonIn file: File)
 }
 
 class HomeCollectionViewCell: UICollectionViewCell {
@@ -21,31 +21,32 @@ class HomeCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imageViewBottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var imageViewTopConstraint: NSLayoutConstraint!
     
+    // MARK: - Property
     static let identifier = "HomeCollectionViewCell"
     static let columnNumber: CGFloat = 3
     static let cellSpacing: CGFloat = 8.0
     
     weak var delegate: HomeCollectionViewCellDelegate?
-    var image: Image?
+    var file: File?
     
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
     // MARK: - Custom cell
-    public func setupData(with image: Image) {
-        self.image = image
+    public func setupData(with file: File) {
+        self.file = file
         
-        if image.nameImage == "camera" {
+        if file.nameImage == "camera" {
             selectedButton.isHidden = true
         }
         else {
             selectedButton.isHidden = false
         }
         
-        imageView.image = UIImage(named: image.nameImage)
+        imageView.image = UIImage(named: file.nameImage)
         
-        if image.isSelected == true {
+        if file.isSelected {
             selectedButton.setImage(UIImage(named: "Vector-4"), for: .normal)
         }
         else{
@@ -53,10 +54,6 @@ class HomeCollectionViewCell: UICollectionViewCell {
         }
         
         self.imageView.layer.cornerRadius = self.imageView.frame.width / 20
-    }
-    
-    static func nib() -> UINib {
-        return UINib(nibName: "HomeCollectionViewCell", bundle: nil)
     }
     
     // MARK: - Button Action
@@ -69,19 +66,18 @@ class HomeCollectionViewCell: UICollectionViewCell {
         })
     }
     
+    // MARK: - Scale image
     @IBAction func selectedButtonAction(_ sender: Any) {
-        if let index = listImages.firstIndex(where: {$0.id == image!.id}) {
-            listImages[index].isSelected  = !listImages[index].isSelected
-        }
+        file?.isSelected = !file!.isSelected
         
-        if image!.isSelected {
+        if file!.isSelected {
             selectedButton.setImage(UIImage(named: "Vector-4"), for: .normal)
-            delegate?.homeCollectionViewCell(self, didTapSelectButtonIn: image!)
+            delegate?.homeCollectionViewCell(self, didTapSelectButtonIn: file!)
             scaleImage(15)
         }
         else {
             selectedButton.setImage(UIImage(named: "Vector-3"), for: .normal)
-            delegate?.homeCollectionViewCell(self, didTapSelectButtonIn: image!)
+            delegate?.homeCollectionViewCell(self, didTapSelectButtonIn: file!)
             scaleImage(0)
         }
     }

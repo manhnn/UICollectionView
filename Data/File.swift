@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Image {
+class File {
     
     var id = UUID().uuidString
     var nameImage = ""
