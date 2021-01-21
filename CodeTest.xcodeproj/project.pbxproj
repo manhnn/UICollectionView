@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		25458DBA25B9341C0030F3C5 /* GalleryBlackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25458DB825B9341C0030F3C5 /* GalleryBlackViewController.swift */; };
+		25458DBB25B9341C0030F3C5 /* GalleryBlackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25458DB925B9341C0030F3C5 /* GalleryBlackViewController.xib */; };
+		25458DC425B937850030F3C5 /* GalleryBlackCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25458DC225B937850030F3C5 /* GalleryBlackCollectionViewCell.swift */; };
+		25458DC525B937850030F3C5 /* GalleryBlackCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25458DC325B937850030F3C5 /* GalleryBlackCollectionViewCell.xib */; };
+		25458DD725B97B6D0030F3C5 /* GalleryBlackAddViewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25458DD525B97B6D0030F3C5 /* GalleryBlackAddViewCollectionViewCell.swift */; };
+		25458DD825B97B6D0030F3C5 /* GalleryBlackAddViewCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25458DD625B97B6D0030F3C5 /* GalleryBlackAddViewCollectionViewCell.xib */; };
 		254DAE2225B80AA00077E317 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254DAE2125B80AA00077E317 /* File.swift */; };
 		254DAE2A25B80C2A0077E317 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254DAE2825B80C2A0077E317 /* HomeCollectionViewCell.swift */; };
 		254DAE2B25B80C2A0077E317 /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 254DAE2925B80C2A0077E317 /* HomeCollectionViewCell.xib */; };
@@ -18,6 +24,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		25458DB825B9341C0030F3C5 /* GalleryBlackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryBlackViewController.swift; sourceTree = "<group>"; };
+		25458DB925B9341C0030F3C5 /* GalleryBlackViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryBlackViewController.xib; sourceTree = "<group>"; };
+		25458DC225B937850030F3C5 /* GalleryBlackCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryBlackCollectionViewCell.swift; sourceTree = "<group>"; };
+		25458DC325B937850030F3C5 /* GalleryBlackCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryBlackCollectionViewCell.xib; sourceTree = "<group>"; };
+		25458DD525B97B6D0030F3C5 /* GalleryBlackAddViewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryBlackAddViewCollectionViewCell.swift; sourceTree = "<group>"; };
+		25458DD625B97B6D0030F3C5 /* GalleryBlackAddViewCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryBlackAddViewCollectionViewCell.xib; sourceTree = "<group>"; };
 		254DAE2125B80AA00077E317 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		254DAE2825B80C2A0077E317 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		254DAE2925B80C2A0077E317 /* HomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -41,6 +53,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		25458DA225B932910030F3C5 /* GalleryBlack */ = {
+			isa = PBXGroup;
+			children = (
+				25458DB825B9341C0030F3C5 /* GalleryBlackViewController.swift */,
+				25458DB925B9341C0030F3C5 /* GalleryBlackViewController.xib */,
+				25458DC225B937850030F3C5 /* GalleryBlackCollectionViewCell.swift */,
+				25458DC325B937850030F3C5 /* GalleryBlackCollectionViewCell.xib */,
+				25458DD525B97B6D0030F3C5 /* GalleryBlackAddViewCollectionViewCell.swift */,
+				25458DD625B97B6D0030F3C5 /* GalleryBlackAddViewCollectionViewCell.xib */,
+			);
+			path = GalleryBlack;
+			sourceTree = "<group>";
+		};
 		254DAE2025B80A8C0077E317 /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -53,7 +78,8 @@
 			isa = PBXGroup;
 			children = (
 				254DAE2025B80A8C0077E317 /* Data */,
-				25A6FA1825B6DB1100D94E42 /* Home */,
+				25458DA225B932910030F3C5 /* GalleryBlack */,
+				25A6FA1825B6DB1100D94E42 /* GalleryWhite */,
 				25A6FA0025B6DAD100D94E42 /* CodeTest */,
 				25A6F9FF25B6DAD100D94E42 /* Products */,
 			);
@@ -78,7 +104,7 @@
 			path = CodeTest;
 			sourceTree = "<group>";
 		};
-		25A6FA1825B6DB1100D94E42 /* Home */ = {
+		25A6FA1825B6DB1100D94E42 /* GalleryWhite */ = {
 			isa = PBXGroup;
 			children = (
 				25A6FA1925B6DB1F00D94E42 /* HomeViewController.swift */,
@@ -86,7 +112,7 @@
 				254DAE2825B80C2A0077E317 /* HomeCollectionViewCell.swift */,
 				254DAE2925B80C2A0077E317 /* HomeCollectionViewCell.xib */,
 			);
-			path = Home;
+			path = GalleryWhite;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,8 +172,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25458DBB25B9341C0030F3C5 /* GalleryBlackViewController.xib in Resources */,
 				25A6FA0E25B6DAD300D94E42 /* LaunchScreen.storyboard in Resources */,
+				25458DD825B97B6D0030F3C5 /* GalleryBlackAddViewCollectionViewCell.xib in Resources */,
 				25A6FA0B25B6DAD300D94E42 /* Assets.xcassets in Resources */,
+				25458DC525B937850030F3C5 /* GalleryBlackCollectionViewCell.xib in Resources */,
 				25A6FA1C25B6DB1F00D94E42 /* HomeViewController.xib in Resources */,
 				254DAE2B25B80C2A0077E317 /* HomeCollectionViewCell.xib in Resources */,
 			);
@@ -161,8 +190,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				254DAE2A25B80C2A0077E317 /* HomeCollectionViewCell.swift in Sources */,
+				25458DC425B937850030F3C5 /* GalleryBlackCollectionViewCell.swift in Sources */,
 				25A6FA0225B6DAD100D94E42 /* AppDelegate.swift in Sources */,
+				25458DBA25B9341C0030F3C5 /* GalleryBlackViewController.swift in Sources */,
 				254DAE2225B80AA00077E317 /* File.swift in Sources */,
+				25458DD725B97B6D0030F3C5 /* GalleryBlackAddViewCollectionViewCell.swift in Sources */,
 				25A6FA1B25B6DB1F00D94E42 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -311,7 +343,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = manhnn.CodeTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -329,7 +361,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = manhnn.CodeTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

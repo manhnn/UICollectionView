@@ -92,7 +92,7 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        let width = (UIScreen.main.bounds.width - (HomeCollectionViewCell.columnNumber + 1) * HomeCollectionViewCell.cellSpacing) / HomeCollectionViewCell.columnNumber
+        let width = (UIScreen.main.bounds.width - (HomeCollectionViewCell.numberColumn + 1) * HomeCollectionViewCell.cellSpacing) / HomeCollectionViewCell.numberColumn
         let height = width
         return CGSize(width: width, height: height)
     }

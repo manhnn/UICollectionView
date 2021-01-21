@@ -23,7 +23,7 @@ class HomeCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Property
     static let identifier = "HomeCollectionViewCell"
-    static let columnNumber: CGFloat = 3
+    static let numberColumn: CGFloat = 3
     static let cellSpacing: CGFloat = 8.0
     
     weak var delegate: HomeCollectionViewCellDelegate?
