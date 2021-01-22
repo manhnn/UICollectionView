@@ -7,6 +7,11 @@
 
 import UIKit
 
+enum AlphaType: CGFloat {
+    case dark = 0.65
+    case light = 1
+}
+
 class GalleryBlackCollectionViewCell: UICollectionViewCell {
 
     // MARK: - UI
@@ -19,7 +24,6 @@ class GalleryBlackCollectionViewCell: UICollectionViewCell {
     static let cellSpacing: CGFloat = 1.5
     
     var file: FileImage?
-    let selectedImageAlpha: CGFloat = 0.65
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -33,12 +37,12 @@ class GalleryBlackCollectionViewCell: UICollectionViewCell {
         self.file = file
         self.imageView.image = UIImage(named: file.nameImage)
         self.numberSelectedLabel.isHidden = (file.turnSelected != 0) ? false : true
-        self.imageView.alpha = (file.turnSelected != 0) ? selectedImageAlpha : 1
+        self.imageView.alpha = (file.turnSelected != 0) ? AlphaType.dark.rawValue : AlphaType.light.rawValue
         self.numberSelectedLabel.text = file.turnSelected < 10 ? "0\(file.turnSelected)" : "\(file.turnSelected)"
     }
     
     public func didSelectItem(with turnSelected: Int) {
-        self.imageView.alpha = (turnSelected != 0) ? selectedImageAlpha : 1
+        self.imageView.alpha = (turnSelected != 0) ? AlphaType.dark.rawValue : AlphaType.light.rawValue
     
         self.numberSelectedLabel.isHidden = (turnSelected != 0) ? false : true
         self.numberSelectedLabel.text = turnSelected < 10 ? "0\(turnSelected)" : "\(turnSelected)"
