@@ -50,7 +50,10 @@ class GalleryBlackViewController: UIViewController {
         FileImage.init(nameImage: "image 18", turnSelected: 0)
      ]
 
-    public var listSelectedFiles = [FileImage]()
+    var listSelectedFiles = [FileImage]()
+    
+    // First save index of list File, Second save index of list SelectedFile
+    var listPairIndex = [(Int, Int)]()
     
     // MARK: - UI
     @IBOutlet weak var subAddView: UIView!
@@ -96,27 +99,26 @@ extension GalleryBlackViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == galleryBlackCollectionView {
             let cell = galleryBlackCollectionView.cellForItem(at: indexPath) as! GalleryBlackCollectionViewCell
+            // select cell optimize
             if listFiles[indexPath.row].turnSelected == 0 {
                 listSelectedFiles.append(listFiles[indexPath.row])
                 listFiles[indexPath.row].turnSelected = listSelectedFiles.count
+                listPairIndex.append((indexPath.row, listSelectedFiles.count - 1))
             }
+            // unselect cell optimize
             else {
-                if let indexFirst = listSelectedFiles.firstIndex(where: {$0.id == listFiles[indexPath.row].id}) {
-                    listSelectedFiles.remove(at: indexFirst)
-                    listFiles[indexPath.row].turnSelected = 0
-                    for index in indexFirst..<listSelectedFiles.count {
-                        listSelectedFiles[index].turnSelected -= 1
-                        if let index2 = listFiles.firstIndex(where: {$0.id == listSelectedFiles[index].id}) {
-                            listFiles[index2].turnSelected = listSelectedFiles[index].turnSelected
-                        }
-                    }
-                    
+                let indexFirstOfSelectedFile = listFiles[indexPath.row].turnSelected - 1
+                listSelectedFiles.remove(at: indexFirstOfSelectedFile)
+                listPairIndex.remove(at: indexFirstOfSelectedFile)
+                listFiles[indexPath.row].turnSelected = 0
+                for index in indexFirstOfSelectedFile..<listSelectedFiles.count {
+                    listSelectedFiles[index].turnSelected -= 1
+                    listFiles[listPairIndex[index].0].turnSelected = listSelectedFiles[index].turnSelected
                 }
                 galleryBlackCollectionView.reloadData()
             }
             subAddCollectionView.reloadData()
             cell.didSelectItem(with: listFiles[indexPath.row].turnSelected)
-            
             
             updateContraintBottomOfCollectionView()
         }
@@ -178,23 +180,21 @@ extension GalleryBlackViewController: UICollectionViewDelegateFlowLayout {
 // MARK: - GalleryBlackAddViewCollectionViewCellDelegate
 extension GalleryBlackViewController: GalleryBlackAddViewCollectionViewCellDelegate {
     func galleryBlackAddViewCollectionViewCell(_ view: GalleryBlackAddViewCollectionViewCell, DidTapUnSelectButtonIn fileImage: FileImage) {
-        // Remove in listSelectedFiles
-        if let indexFirst = listSelectedFiles.firstIndex(where: {$0.id == fileImage.id}) {
-            if let index2 = listFiles.firstIndex(where: {$0.id == listSelectedFiles[indexFirst].id}) {
-                listFiles[index2].turnSelected = 0
-            }
-            listSelectedFiles.remove(at: indexFirst)
-            
-            subAddCollectionView.reloadData()
-            
-            for index in indexFirst..<listSelectedFiles.count {
-                listSelectedFiles[index].turnSelected -= 1
-                if let index2 = listFiles.firstIndex(where: {$0.id == listSelectedFiles[index].id}) {
-                    listFiles[index2].turnSelected = listSelectedFiles[index].turnSelected
-                }
-            }
-            galleryBlackCollectionView.reloadData()
-            updateContraintBottomOfCollectionView()
+        
+        let fileImageIndex = fileImage.turnSelected - 1
+        
+        // Remove in listSelectedFiles optimize
+        listFiles[listPairIndex[fileImageIndex].0].turnSelected = 0
+        listSelectedFiles.remove(at: fileImageIndex)
+        listPairIndex.remove(at: fileImageIndex)
+        
+        subAddCollectionView.reloadData()
+        
+        for index in fileImageIndex..<listSelectedFiles.count {
+            listSelectedFiles[index].turnSelected -= 1
+            listFiles[listPairIndex[index].0].turnSelected = listSelectedFiles[index].turnSelected
         }
+        galleryBlackCollectionView.reloadData()
+        updateContraintBottomOfCollectionView()
     }
 }

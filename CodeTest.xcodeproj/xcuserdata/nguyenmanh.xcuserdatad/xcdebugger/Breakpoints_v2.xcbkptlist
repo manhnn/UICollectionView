@@ -71,79 +71,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "49917634-F9B0-4A87-8C51-BF38B2AF2A0D"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GalleryBlack/GalleryBlackAddViewCollectionViewCell.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "unSelectButtonAction(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "72C1D55A-13DE-4D23-A40D-92ED2BEBE460"
+            uuid = "32D0C89C-AD2C-4CFB-8B98-2A6C69CA7DA1"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GalleryBlack/GalleryBlackViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "182"
-            endingLineNumber = "182"
-            landmarkName = "galleryBlackAddViewCollectionViewCell(_:DidTapUnSelectButtonIn:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "72C1D55A-13DE-4D23-A40D-92ED2BEBE460 - 60f0466f2ea8f150"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CodeTest.GalleryBlackViewController.galleryBlackAddViewCollectionViewCell(_: CodeTest.GalleryBlackAddViewCollectionViewCell, DidTapUnSelectButtonIn: CodeTest.FileImage) -&gt; ()"
-                  moduleName = "CodeTest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nguyenmanh/Documents/Learn_iOS_Solar/CodeTest/GalleryBlack/GalleryBlackViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "178"
-                  endingLineNumber = "178"
-                  offsetFromSymbolStart = "84">
-               </Location>
-               <Location
-                  uuid = "72C1D55A-13DE-4D23-A40D-92ED2BEBE460 - e81b0f51618813e7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (CodeTest.FileImage) -&gt; Swift.Bool in CodeTest.GalleryBlackViewController.galleryBlackAddViewCollectionViewCell(_: CodeTest.GalleryBlackAddViewCollectionViewCell, DidTapUnSelectButtonIn: CodeTest.FileImage) -&gt; ()"
-                  moduleName = "CodeTest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nguyenmanh/Documents/Learn_iOS_Solar/CodeTest/GalleryBlack/GalleryBlackViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "178"
-                  endingLineNumber = "178"
-                  offsetFromSymbolStart = "32">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "6BD0E4F0-8BC9-4783-A0DC-A38B5F44D2C6"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GalleryBlack/GalleryBlackViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "188"
-            endingLineNumber = "188"
+            startingLineNumber = "184"
+            endingLineNumber = "184"
             landmarkName = "galleryBlackAddViewCollectionViewCell(_:DidTapUnSelectButtonIn:)"
             landmarkType = "7">
          </BreakpointContent>

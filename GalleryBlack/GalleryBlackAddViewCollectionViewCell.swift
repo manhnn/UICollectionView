@@ -32,6 +32,7 @@ class GalleryBlackAddViewCollectionViewCell: UICollectionViewCell {
     
     @IBAction func unSelectButtonAction(_ sender: Any) {
         self.delegate?.galleryBlackAddViewCollectionViewCell(self, DidTapUnSelectButtonIn: fileImage!)
+        
     }
     
 }
