@@ -25,6 +25,10 @@ class GalleryBlackCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
     }
     
+    deinit {
+        print("cell deinited")
+    }
+    
     public func setupData(with file: FileImage) {
         self.file = file
         self.imageView.image = UIImage(named: file.nameImage)

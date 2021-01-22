@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol GalleryBlackAddViewCollectionViewCellDelegate {
+protocol GalleryBlackAddViewCollectionViewCellDelegate: class {
     func galleryBlackAddViewCollectionViewCell(_ view: GalleryBlackAddViewCollectionViewCell, DidTapUnSelectButtonIn fileImage: FileImage)
 }
 
@@ -17,12 +17,16 @@ class GalleryBlackAddViewCollectionViewCell: UICollectionViewCell {
     
     static let identifier = "GalleryBlackAddViewCollectionViewCell"
     var fileImage: FileImage?
-    var delegate: GalleryBlackAddViewCollectionViewCellDelegate?
+    weak var delegate: GalleryBlackAddViewCollectionViewCellDelegate?
     
     static let cellSpacing: CGFloat = 10
     
     override func awakeFromNib() {
         super.awakeFromNib()
+    }
+    
+    deinit {
+        print("add view deinited")
     }
 
     public func setupData(with fileImage: FileImage) {

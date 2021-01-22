@@ -49,7 +49,8 @@ class GalleryBlackViewController: UIViewController {
         FileImage.init(nameImage: "image 20", turnSelected: 0),
         FileImage.init(nameImage: "image 18", turnSelected: 0)
      ]
-
+    
+    // Save image selected
     var listSelectedFiles = [FileImage]()
     
     // First save index of list File, Second save index of list SelectedFile
